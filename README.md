@@ -1,0 +1,2 @@
+-This is a website where a user can create an account, login to apply for admission.
+-Session Management, cookies and filters have to be applied, I18N as well as Mail to the applicant.
