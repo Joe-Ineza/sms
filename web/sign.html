@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>AUCA SYSTEM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style3.css">
+    </head>
+    
+    
+ 
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                    
+                </div>
+                <form id="login" action="login" name="myform" class="input-group" onsubmit="return validateform()" method="post">
+                    <input type="text" class="input-field" name="username" placeholder="Enter your username">
+                    <input type="password" class="input-field" name="password" placeholder="Enter your password">
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log in</button>
+                </form>
+                
+                <form id="register" action="createAccount" name="myform2" method="post" class="input-group" onsubmit="return validateform2()">
+                    
+                    <input type="text" name="username" class="input-field" placeholder="UserNames" required>
+                    <input type="email" name="email" class="input-field" placeholder="Email Address" required>
+                    <input type="text" name="password1" class="input-field" placeholder="Enter Password" required>
+                    <input type="text" name="password2" class="input-field" placeholder="Confirm Password"  required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                    <button type="submit"  class="submit-btn" >Register</button>
+                   
+                </form>
+                
+                
+
+        </div>
+         <!--
+         
+         &&&&&&&&&&&
+            <label for="faculties">Choose a department:</label>
+
+                    <select name="cars" id="cars">
+                      <option value="Software Eng">Software Eng</option>
+                      <option value="Networking">Networking</option>
+                      <option value="Info Management">Info Management</option>
+                     
+                    </select>
+         
+         
+         
+         &&&&&&&&&&&       
+         <div align="center">
+                <h1>Login FORM </h1>
+                <form action="signin" method = "post" >
+                    userName: <input type="text" name="uname" required /> <br>  <br>
+                    password: <input type="password" name="password" required /> <br>  <br>
+                    <input type="submit" />
+                    <a href="signup.html">New User</a>
+               <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
+                <p><i>To display a different welcome page for this project, modify</i>
+                    <tt>index.jsp</tt> <i>, or create your own welcome page then change
+                        the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
+                        welcome page and also update the welcome-file setting in</i>
+                    <tt>web.xml</tt>.</p>  -->
+       </div>
+        
+<!--        <script src="./myscript.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+               function valid()
+                 {
+                swal("Successfuly");
+                
+                }
+            
+                function validateform(){  
+               let name=document.myform.username.value;  
+               let password=document.myform.password.value;  
+              
+                if (name==null || name==""){  
+                  alert("Student Id can't be blank");  
+                  return false;  
+                }else if
+                (name.length!=5)
+                {
+                    alert("Student Id must be of 5 numbers");
+                    return false;
+                }
+                else if (password.length<8){  
+                  alert("Password must be at least 8 characters long.");  
+                  return false;  
+                  }
+                
+                swal("Good job!", "You are successfully logged in!", "success");
+                }  
+               
+                function validateform2(){  
+                let idreg =document.myform2.idreg.value;
+                let password1=document.myform2.password1.value; 
+                let x=document.myform2.emailreg.value;  
+                let atposition=x.indexOf("@");  
+                let dotposition=x.lastIndexOf(".");  
+                
+                let firstpassword=document.myform2.password1.value;  
+                let secondpassword=document.myform2.password2.value; 
+                if (idreg==null || idreg==""){  
+                  alert("Student Id can't be blank");  
+                  return false;  
+                }else if
+                (idreg.length!=5)
+                {
+                    alert("Student Id must be of 5 numbers");
+                    return false;
+                }
+                else if (password1.length<8 && password2.length<8){  
+                  alert("Password must be at least 8 characters long.");  
+                  return false;  
+                  }
+                else  if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                      alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                      return false;  
+                      }  
+                else if(firstpassword!=secondpassword){
+                    alert("password must be same!");  
+                    return false;
+                }
+                        swal({
+                        title: "Good job!",
+                        text: "Registred successfully!",
+                        icon: "success",
+                        });
+                }  
+                     
+               
+            
+//                function matchpass(){  
+//                    let firstpassword=document.myform2.password1.value;  
+//                    let secondpassword=document.myform2.password2.value;  
+//
+//                    if(firstpassword==secondpassword){  
+//                    return true;  
+//                    }  
+//                    else{  
+//                    alert("password must be same!");  
+//                    return false;  
+//                    }  
+//                }  
+                
+//                function validate(){  
+//                var num=document.myform.num.value;  
+//                if (isNaN(num)){  
+//                  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+//                  return false;  
+//                }else{  
+//                  return true;  
+//                  }  
+//                } 
+               
+
+//                   function validateemail()  
+//                    {  
+//                    var x=document.myform.email.value;  
+//                    var atposition=x.indexOf("@");  
+//                    var dotposition=x.lastIndexOf(".");  
+//                    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+//                      alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+//                      return false;  
+//                      }  
+//                    }
+//                    
+//                    
+//                                            function validatepic(){  
+//                        var name=document.f1.name.value;  
+//                        var password=document.f1.password.value;  
+//                        var status=false;  
+//
+//                        if(name.length<1){  
+//                        document.getElementById("nameloc").innerHTML=  
+//                        " <img src='unchecked.gif'/> Please enter your name";  
+//                        status=false;  
+//                        }else{  
+//                        document.getElementById("nameloc").innerHTML=" <img src='checked.gif'/>";  
+//                        status=true;  
+//                        }  
+//                        if(password.length<6){  
+//                        document.getElementById("passwordloc").innerHTML=  
+//                        " <img src='unchecked.gif'/> Password must be at least 6 char long";  
+//                        status=false;  
+//                        }else{  
+//                        document.getElementById("passwordloc").innerHTML=" <img src='checked.gif'/>";  
+//                        }  
+//                        return status;  
+//                        }  
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+               
+         </script>
+         -->
+         
+    </body>
+</html>

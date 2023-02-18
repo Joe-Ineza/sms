@@ -1,0 +1,229 @@
+
+<!DOCTYPE html PUBLIC "-//>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Registration Form</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <%
+        
+        if(session.getAttribute("username")== null)
+        {
+            response.sendRedirect("login.html);
+        }
+    %>
+    <div class="container">
+        <header>Registration</header>
+        <form action="registerStudent" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Your Informations</span>
+                    <div class="fields">
+                        
+                        
+                        <div class="input-field">
+                            <label>paySlipCode</label>
+                            <input type="text" name="payslip" placeholder="Enter your payment slip" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>fname</label>
+                            <input type="text" name="fname" placeholder="Enter your First Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>lname</label>
+                            <input type="text" name="lname" placeholder="Enter your Last Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="text" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Confirm Password</label>
+                            <input type="text" placeholder="Confirm Your Password" required>
+                        </div>
+                        
+                    
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" name="nationality" placeholder="Enter your Nationality" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Faculty</label>
+                            <input type="text" name="faculty" placeholder="Enter your Faculty" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Department</label>
+                            <input type="text" name="department" placeholder="Enter your Department" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date Of Birth</label>
+                            <input type="date" name="dob" placeholder="Enter birth date" required>
+                        </div>
+                        
+                         <div>
+                            <label for="profile_pic">Choose file to upload</label>
+                            <input
+                              type="file"
+                              id="profile_pic"
+                              name="profile_pic"
+                              accept=".jpg, .jpeg, .png" />
+                         </div>
+                        
+                        <button class="submit">
+                            <span class="submit"><input type="submit" value="Submit" /></span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+<!--                        <input type="submit" value="Submit"/>-->
+                    </div>
+                </div>
+                        <!-- <div class="details ID">
+                            <span class="title">Identity Details</span>
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="Enter your name" required>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label>Date of Birth</label>
+                                    <input type="date" placeholder="Enter birth date" required>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label>Email</label>
+                                    <input type="text" placeholder="Enter your email" required>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label>Mobile Number</label>
+                                    <input type="text" placeholder="Enter mobile number" required>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Gender</label>
+                                    <input type="text" placeholder="Enter your gender" required>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label>Occupation</label>
+                                    <input type="text" placeholder="Enter your occupation" required>
+                                </div>
+
+                                <button class="nextBtn">
+                                    <span class="btnText">Next</span>
+                                    <i class="uil uil-navigator"></i>
+                                </button>
+                            </div>
+                        </div>                       
+                    
+                        <div class="form second">
+                            <div class="details address">
+                                <span class="title">Address Details</span>
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>Full Name</label>
+                                        <input type="text" placeholder="Enter your name" required>
+                                    </div>
+            
+                                    <div class="input-field">
+                                        <label>Date of Birth</label>
+                                        <input type="date" placeholder="Enter birth date" required>
+                                    </div>
+            
+                                    <div class="input-field">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="Enter your email" required>
+                                    </div>
+            
+                                    <div class="input-field">
+                                        <label>Mobile Number</label>
+                                        <input type="text" placeholder="Enter mobile number" required>
+                                    </div>
+                                    
+                                    <div class="input-field">
+                                        <label>Gender</label>
+                                        <input type="text" placeholder="Enter your gender" required>
+                                    </div>
+            
+                                    <div class="input-field">
+                                        <label>Occupation</label>
+                                        <input type="text" placeholder="Enter your occupation" required>
+                                    </div>
+                                </div>
+                            </div>
+                                    <div class="details ID">
+                                        <span class="title">Identity Details</span>
+                                        <div class="fields">
+                                            <div class="input-field">
+                                                <label>Full Name</label>
+                                                <input type="text" placeholder="Enter your name" required>
+                                            </div>
+                    
+                                            <div class="input-field">
+                                                <label>Date of Birth</label>
+                                                <input type="date" placeholder="Enter birth date" required>
+                                            </div>
+                    
+                                            <div class="input-field">
+                                                <label>Email</label>
+                                                <input type="text" placeholder="Enter your email" required>
+                                            </div>
+                    
+                                            <div class="input-field">
+                                                <label>Mobile Number</label>
+                                                <input type="text" placeholder="Enter mobile number" required>
+                                            </div>
+                                            
+                                            <div class="input-field">
+                                                <label>Gender</label>
+                                                <input type="text" placeholder="Enter your gender" required>
+                                            </div>
+                    
+                                            <div class="input-field">
+                                                <label>Occupation</label>
+                                                <input type="text" placeholder="Enter your occupation" required>
+                                            </div>
+            
+                                            <div class="buttons">
+                                                <div class="backBtn">
+                                                    <i class="uil uil-navigator"></i>
+                                                    <span class="btnText">Back</span>
+                                                  
+                                                </div>
+                                                <button class="submit">
+                                                    <span class="submit">Submit</span>
+                                                    <i class="uil uil-navigator"></i>
+                                                </button>
+                                    
+                                            </div>
+                                        </div>
+                                    </div>    
+            -->
+                        
+
+  
+        </form>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
