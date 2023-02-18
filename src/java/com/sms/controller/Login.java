@@ -51,12 +51,12 @@ public class Login extends HttpServlet {
                          System.out.println("Reached3");
                          flag = true;
                          System.out.println("Reached4 "+flag);
-                         response.sendRedirect("index.html");
+                         response.sendRedirect("admission.html");
                     }
                 }
                 if(flag == false)
                 {
-                    response.sendRedirect("sign.html");
+                    response.sendRedirect("index.html");
                 }
             
                 
